@@ -1,0 +1,124 @@
+/*the fonts ill be using*/
+@font-face {
+    font-family: GOT;
+    src: url(./Fonts/Game\ of\ Thrones.ttf);
+}
+@font-face {
+    font-family: general;
+    src: url(./Fonts/Poppins-Light.ttf);
+}
+
+/*html selector's primary use is for the background changes*/
+html
+{
+    height: 100%; /*makes the gradiants fill the entire screen*/
+    background-color: #000000;
+    background-image: url(./Assets/Images/got_background.jpeg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+/*casuel design selectors for the ids and the classes*/
+.header
+{
+    font-family: GOT;
+    text-align: center;
+    color: aliceblue;
+}
+#head
+{
+    font-size: 5vw;
+    text-shadow: 10px 10px 20px #000000;
+}
+#opener , #quote
+{
+    font-family: general;
+    font-size: 1.2vw;
+    text-shadow: 3px 3px 10px #000000;
+    text-align: center;
+}
+
+.mid
+{
+    text-align: center;
+    color: white;
+    text-shadow: 5px 5px 10px #000000;
+}
+#houseName
+{
+    font-family: GOT;
+    font-size: 3vw;
+}
+
+/*represents the selector of the buttons*/
+.sigil
+{
+    width: 9vw;
+    height: 9vw;
+    background: none;
+    border: none;
+    background-size: cover;
+    font-size: 3vw;
+    color: gray;
+    font-family: GOT;
+    text-shadow: 5px 5px 10px #000000;
+
+}
+/*hover effect for each button - enlarge and text in white*/
+.sigil:hover
+{
+    width: 12vw;
+    height: 12vw;
+    color: white;
+}
+/*pressing effect*/
+.sigilPress
+{
+    transform: translateY(4px);
+}
+/*the following selecor is used for the fade in - fade out transition
+that we can see when we press a button*/
+.blackScreen
+{
+    background-color: black;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: all 300ms ease-in-out;
+    
+}
+
+/*the images for each button and the background gradient in the back when you press it*/
+.S{background-image: url("./Assets/Images/img-01.png");}
+.s_back{background-image: linear-gradient(130deg, rgba(250,250,250,1), rgba(51,51,51,1));}
+
+.L{background-image: url("./Assets/Images/img-02.png");}
+.l_back{background-image: linear-gradient(130deg, rgba(255,181,64,1), rgba(255,0,0,1) 80%);}
+
+.T{background-image: url("./Assets/Images/img-04.png");}
+.t_back{background-image: linear-gradient(130deg, rgba(198,0,0,1), rgba(28,9,9,1));}
+
+.B{background-image: url("./Assets/Images/img-05.png");}
+.b_back{background-image: linear-gradient(130deg, rgba(36,201,0,1), rgba(0,0,0,1));}
+
+.M{background-image: url("./Assets/Images/img-06.png");}
+.m_back{background-image: linear-gradient(130deg, rgba(242,234,18,1), rgb(215, 107, 0));}
+
+.G{background-image: url("./Assets/Images/img-07.png");}
+.g_back{background-image: linear-gradient(130deg, rgba(247,219,12,1) 0%, rgb(37, 37, 37) 100%);}
+
+.V{background-image: url("./Assets/Images/img-03.png");}
+.v_back{background-image: linear-gradient(130deg, rgba(255,255,255,1) 0%, rgba(97,0,66,1) 100%);}
+
+
+/*this media query makes the small text in the screen disspear in a small screen*/
+/*although this is quite a small reference to RWD, almost every size in this css code is refernced by view width / precentage etc.*/
+@media screen and (max-width: 600px) 
+{
+    #opener , #quote
+     {
+      display: none;
+     }
+}
